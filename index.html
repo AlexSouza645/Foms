@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários Dinâmicos</title>
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="script.js">
+</head>
+<body>
+    <header>
+        <h1>Meus Formulários</h1>
+    </header>
+    <nav>
+        <button id="btnContato">Contato</button>
+        <button id="btnInscricao">Inscrição</button>
+        <button id="btnPesquisa">Pesquisa</button>
+    </nav>
+    <main>
+        <div id="formContato" class="form">
+            </div>
+        <div id="formInscricao" class="form">
+            </div>
+        <div id="formPesquisa" class="form">
+            </div>
+    </main>
+    <script>
+        const btnContato = document.getElementById('btnContato');
+        const btnInscricao = document.getElementById('btnInscricao');
+        const btnPesquisa = document.getElementById('btnPesquisa');
+
+        const formContato = document.getElementById('formContato');
+        const formInscricao = document.getElementById('formInscricao');
+        const formPesquisa = document.getElementById('formPesquisa');
+
+        btnContato.addEventListener('click', () => {
+            formContato.style.display = 'block';
+            formInscricao.style.display = 'none';
+            formPesquisa.style.display = 'none';
+        });
+
+        btnInscricao.addEventListener('click', () => {
+            formContato.style.display = 'none';
+            formInscricao.style.display = 'block';
+            formPesquisa.style.display = 'none';
+        });
+
+        btnPesquisa.addEventListener('click', () => {
+            formContato.style.display = 'none';
+            formInscricao.style.display = 'none';
+            formPesquisa.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
