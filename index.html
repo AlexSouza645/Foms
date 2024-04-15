@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulários Dinâmicos</title>
-    <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="estilo.css">
 </head>
+
 <body>
     <header>
         <h1>Meus Formulários</h1>
@@ -17,12 +18,251 @@
         <button id="btnPesquisa">Pesquisa</button>
     </nav>
     <main>
-        <div id="formContato" class="form">
-            </div>
-        <div id="formInscricao" class="form">
-            </div>
+        
+
         <div id="formPesquisa" class="form">
+
+            <div class="box-formulario">
+
+                <div class="formulario">
+
+                    <div class="title-form">
+                        <h1>Fale Conosco</h1>
+                    </div>
+
+                    <form action="#" method="post">
+
+
+                        <span>
+                            <input type="text" class="input-balao-up" id="nome" name="nome" placeholder="Nome"
+                                autocomplete="off" required="" />
+                            <label for="nome"> <i class="icon icon-user-outline"></i> </label>
+                        </span>
+
+                        <span>
+                            <input type="text" class="input-balao-up" id="email" name="email" placeholder="E-mail"
+                                autocomplete="off" required="" />
+                            <label for="email"> <i class="icon icon-mail-3"></i> </label>
+                        </span>
+
+                        <span>
+                            <input type="text" class="input-balao-up" id="assunto" name="assunto" placeholder="Assunto"
+                                autocomplete="off" required="" />
+                            <label for="assunto"> <i class="icon icon-info"></i> </label>
+                        </span>
+
+                        <span>
+                            <textarea type="text" class="textarea-balao-up" id="mensagem" name="mensagem" rows="3"
+                                placeholder="Mensagem" autocomplete="off" required=""></textarea>
+                            <label for="mensagem"> <i class="icon icon-bubble-4"></i> </label>
+                        </span>
+
+                        <div class="box-btn">
+
+                            <button type="submit" class="btn-envia zoom-shadow">
+                                <i class="icon icon-forward-1"> Enviar</i>
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div><!--Box Formulario-->
+
+
+
+        </div>
+        <div id="formContato" class="form">
+            <div class="container">
+                <h1>Dados de Pesquisa do Usuário</h1>
+                <p>Obrigado por dedicar seu tempo para participar de nossa pesquisa de dados de clientes.
+                    Seu feedback nos ajudará a melhorar nossos produtos e serviços.</p>
+
+                <form action="#">
+                    <h2>Informação Demográfica</h2>
+                    <div class="section">
+                        <label for="name">Nome Completo:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="section">
+                        <label for="email">Email </label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="section">
+                        <label for="age">Idade:</label>
+                        <input type="number" id="age" name="age" min="18" required>
+                    </div>
+                    <div class="section">
+                        <label for="gender">Gênero:</label>
+                        <select id="gender" name="gender" required>
+                            <option value="male">Homem</option>
+                            <option value="female">Mulher</option>
+                            <!-- <option value="other">Other</option> -->
+                        </select>
+                    </div>
+
+                    <h2>Pedido de compra</h2>
+                    <div class="section">
+                        <label for="product">Primeiro Pedido Adquirido:</label>
+                        <select id="product" name="product" required>
+                            <option value="product1">Produto 1</option>
+                            <option value="product2">Produto 2</option>
+                            <option value="product3">Produto 3</option>
+                            <option value="other">Outros (por favor especifique)</option>
+                        </select>
+                    </div>
+                    <div class="section">
+                        <label for="purchaseFrequency">Comn que frequeência você compra nossos produtos?</label>
+                        <select id="purchaseFrequency" name="purchaseFrequency" required>
+                            <option value="occasionally">Ocasionalmente</option>
+                            <option value="monthly">Mensalmente</option>
+                            <option value="quarterly">Trimestralmente</option>
+                            <option value="annually">Anualmente</option>
+                        </select>
+                    </div>
+                    <div class="section">
+                        <label for="averageSpending">Qual é o seu gasto médio por compra?</label>
+                        <input type="number" id="averageSpending" name="averageSpending" min="0" required>
+                    </div>
+
+                    <h2>Satisfação e
+                        Feedback</h2>
+                    <div class="section">
+                        <label for="satisfactionLevel">No geral, quão satisfeito você está com nossos produtos?</label>
+                        <select id="satisfactionLevel" name="satisfactionLevel" required>
+                            <option value="verySatisfied">Muito Satisfeito</option>
+                            <option value="satisfied">Satisfeito</option>
+                            <option value="neutral">Neutro</option>
+                            <option value="dissatisfied">não satisfeito</option>
+                            <option value="veryDissatisfied">Muito insatisfeito</option>
+                        </select>
+                    </div>
+                    <div class="section">
+                        <label for="feedback">O que você mais gosta em nossos produtos?</label>
+                        <textarea id="feedback" name="feedback" rows="5"></textarea>
+                    </div>
+                    <div class="section">
+                        <label for="suggestions">Que sugestões você tem para melhorias?</label>
+                        <textarea id="suggestions" name="suggestions" rows="5"></textarea>
+                    </div>
+
+                    <button type="submit">Enviar pesquisa</button>
+                </form>
             </div>
+        </div>
+        <div id="formInscricao" class="form">
+            <div class="container_form">
+
+                <h1>Formulário de Cadastro</h1>
+
+                <form action="#" method="post">
+
+                    <div class="form_grupo">
+                        <label for="nome" class="form_label">Nome</label>
+                        <input type="text" name="nome" class="form_input" id="nome" placeholder="Nome" required>
+                    </div>
+
+                    <div class="form_grupo">
+                        <label for="e-mail" class="form_label">Email</label>
+                        <input type="email" name="email" class="form_input" id="email" placeholder="seuemail@email.com"
+                            required>
+                    </div>
+
+                    <div class="form_grupo">
+                        <label for="datanascimento" class="form_label">Data de Nascimento</label>
+                        <input type="date" name="datanascimento" class="form_input" id="datanascimento"
+                            placeholder="Data de Nascimento" required>
+                    </div>
+
+                    <div class="form_grupo">
+
+                        <label for="estadocivil" class="text">Estado civil</label>
+                        <select name="estadocivil" class="dropdown" required>
+
+                            <option selected disabled class="form_select_option" value="">Selecione</option>
+                            <option value="Solteiro" class="form_select_option">Solteiro(a)</option>
+                            <option value="Casado" class="form_select_option">Casado(a) </option>
+                            <option value="Divorciado" class="form_select_option">Divorciado(a)</option>
+                            <option value="Viúvo" class="form_select_option">Viúvo(a)</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form_grupo">
+
+                        <span class="legenda">Sexo:</span>
+
+                        <div class="radio-btn">
+                            <input type="radio" class="form_new_input" id="masculino" name="sexo" value="Masculino"
+                                required="required">
+                            <label for="masculino" class="radio_label form_label"> <span class="radio_new_btn"></span>
+                                Masculino</label>
+                        </div>
+
+                        <div class="radio-btn">
+                            <input type="radio" class="form_new_input" id="feminino" name="sexo" value="Feminino"
+                                required="required">
+                            <label for="feminino" class="radio_label form_label"> <span class="radio_new_btn"></span>
+                                Feminino</label>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form_grupo">
+
+                        <span class="legenda">Você quer aprender o que ?</span>
+
+                        <div class="check-btn">
+                            <input type="checkbox" class="form_new_input" id="html5" name="aprender" value="html5">
+                            <label for="html5" class="form_label check_label"> <span class="check_new_btn"></span>
+                                Html5</label>
+                        </div>
+
+                        <div class="check-btn">
+                            <input type="checkbox" class="form_new_input" id="css3" name="aprender" value="css3">
+                            <label for="css3" class="form_label check_label"><span class="check_new_btn"></span>
+                                Css3</label>
+                        </div>
+
+                        <div class="check-btn">
+                            <input type="checkbox" class="form_new_input" id="jquery" name="aprender" value="jquery">
+                            <label for="jquery" class="form_label check_label"><span class="check_new_btn"></span>
+                                jQuery</label>
+                        </div>
+
+                        <div class="check-btn">
+                            <input type="checkbox" class="form_new_input" id="wordpress" name="aprender"
+                                value="wordpress">
+                            <label for="wordpress" class="form_label check_label"><span class="check_new_btn"></span>
+                                WordPress</label>
+                        </div>
+
+
+                        <div class="form_message">
+
+                            <label for="message" class="form_message_label"> Digite aqui sua sua mensagem:</label>
+                            <textarea name="mensagem" id="message" cols="30" rows="3" class="form_input message_input"
+                                required></textarea>
+
+                        </div>
+
+                        <div class="submit">
+
+                            <input type="hidden" name="acao" value="enviar">
+                            <button type="submit" name="Submit" class="submit_btn">Cadastrar</button>
+
+                        </div>
+                </form>
+
+            </div><!--container_form-->
+        </div>
+
+
+
     </main>
     <script>
         const btnContato = document.getElementById('btnContato');
@@ -52,4 +292,5 @@
         });
     </script>
 </body>
+
 </html>
